@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 30px 0 250px;
+    background-color: white;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* Fixed left navigation */
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #5bb4ec;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Navigation title */
+
+.nav-title {
+    margin: 5px 0 8px;
+    font-size: 26px;
+}
+/* Navigation logo */
+
+.nav-logo {
+    width: 155px;
+    height: 155px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 22px;
+}
+
+/* Navigation buttons */
+
+nav button {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Navigation hover */
+
+nav button:hover {
+    background-color: black;
+}
+
+nav button:hover a {
+    color: white;
+}
+
+/* Navigation links */
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.welcome {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/Logo2.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    transform: scale(1.05);
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 30px;
+}
+/* Main content */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 20px 50px;
+}
+
+/* Main heading */
+
+h1 {
+    color: black;
+    font-size: 36px;
+    margin: 20px 0 25px;
+}
+
+/* IMAGE / LOGO AREA */
+
+.image-container {
+    width: 100%;
+    min-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 25px;
+}
+
+/* Logo */
+
+.image-container img {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Subheading */
+
+main h2 {
+    color: black;
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Introduction */
+
+.intro {
+    max-width: 850px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Welcome section */
+
+.welcome-section {
+    margin-top: 40px;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #5bb4ec;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+/* Booking button */
+
+.booking-button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+.booking-button a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.booking-button:hover {
+    background-color: black;
+}
+
+.booking-button:hover a {
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    background-color: #5bb4ec;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 2px solid black;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+footer p {
+    animation: moveSideToSide 5s ease-in-out infinite;
+}
+
+@keyframes moveSideToSide {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 180px;
+    }
+
+    body {
+        padding-left: 200px;
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
