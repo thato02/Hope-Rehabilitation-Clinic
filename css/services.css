@@ -9,10 +9,11 @@ body {
     padding: 0 30px 0 250px;
     background-color: white;
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
-/* fixed left navigation */
+
+
 nav {
     position: fixed;
     left: 0;
@@ -21,17 +22,16 @@ nav {
     height: 100vh;
     background-color: #5bb4ec;
     padding: 25px 15px;
-    box-sizing: border-box;
     text-align: center;
     z-index: 1000;
 }
 
-/*navigation title*/
 .nav-title {
     margin: 5px 0 35px;
     font-size: 30px;
     color: black;
 }
+
 .nav-logo {
     width: 155px;
     height: 155px;
@@ -40,7 +40,7 @@ nav {
     margin: 0 auto 15px;
     border-radius: 22px;
 }
-/*navigation buttons*/
+
 nav button {
     display: block;
     width: 100%;
@@ -66,90 +66,255 @@ nav a {
     font-weight: bold;
 }
 
-/* Main content */
+
+
 main {
-    max-width: 900px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 35px 20px 50px;
+    padding: 45px 25px 60px;
 }
 
-/*main heading*/
 h1 {
-    text-align: center;
+    text-align: left;
     color: black;
     font-size: 36px;
-    margin: 20px 0;
+    margin: 20px 0 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgb(126, 205, 227);
 }
+
+
+
+.introduction {
+    text-align: left;
+    max-width: 950px;
+    margin: 0 0 35px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+
+.search-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 35px 0 45px;
+    text-align: left;
+}
+
+.search-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    border: 2px solid rgb(126, 205, 227);
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 5px rgb(126, 205, 227);
+}
+
+.search-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+#searchButton {
+    padding: 10px 18px;
+    background-color: rgb(126, 205, 227);
+    border: 2px solid rgb(126, 205, 227);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#searchButton:hover {
+    background-color: white;
+}
+
+#searchButton:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
+#searchMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+
 
 .service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
     align-items: stretch;
-    gap: 20px;
 }
 
-/*introduction*/
-.introduction {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 17px;
-    line-height: 1.7;
-}
 
-/* Service cards */
+
 .service-card {
-    width: 700px;
-    max-width: 90%;
-    margin: 25px auto;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
     border: 2px solid black;
     border-radius: 8px;
     background-color: white;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-/*Service hover*/
-.service-card:hover {
-    transform: translateY(-5px);
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
-/* Service headings */
 .service-card h2 {
     background-color: #5bb4ec;
     margin: 0;
-    padding: 15px;
+    padding: 15px 10px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     border-bottom: 2px solid black;
 }
+
+.service-card p {
+    padding: 15px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.service-card .price {
+    font-weight: bold;
+    padding: 10px 15px 20px;
+    margin-top: auto;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.service-card h2 {
+    background-color: #5bb4ec;
+    margin: 0;
+    padding: 18px 12px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .service-card img {
     width: 100%;
-    max-width: 300px;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     display: block;
-    margin: 0 auto;
-    border-radius: 8px;
+    margin: 0;
+    border-radius: 0;
 }
 
 /* Service descriptions */
 
 .service-card p {
-    padding: 0 25px;
-    line-height: 1.6;
+    padding: 15px 18px;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 /* Prices */
 
 .service-card .price {
     font-weight: bold;
-    padding: 10px 25px 20px;
+    padding: 10px 18px 20px;
+    margin-top: auto;
+}
+
+/* FAQ section */
+
+.faq-section {
+    width: 100%;
+    max-width: 950px;
+    margin: 65px auto 35px;
+}
+
+.faq-section h2 {
+    text-align: left;
+    font-size: 27px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(126, 205, 227);
+}
+
+.faq-item {
+    margin-bottom: 12px;
+    border: 1px solid rgb(126, 205, 227);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 16px;
+    background-color: rgb(126, 205, 227);
+    color: black;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-question:hover,
+.faq-question:focus-visible {
+    background-color: white;
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+.faq-answer {
+    padding: 18px;
+    background-color: white;
+    line-height: 1.7;
+}
+
+.faq-answer p {
     margin: 0;
 }
 
-/* Footer */
 
 footer {
     background-color: #5bb4ec;
@@ -162,8 +327,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
-}
-footer p {
     animation: moveSideToSide 5s ease-in-out infinite;
 }
 
@@ -181,6 +344,16 @@ footer p {
     }
 }
 
+
+
+@media (max-width: 1000px) {
+    .service-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+
 @media (max-width: 768px) {
     nav {
         width: 180px;
@@ -189,6 +362,10 @@ footer p {
     body {
         padding-left: 200px;
         padding-right: 15px;
+    }
+
+    main {
+        padding: 35px 15px;
     }
 
     h1 {
@@ -200,7 +377,9 @@ footer p {
     }
 }
 
-@media (max-width: 480px) {
+
+
+@media (max-width: 550px) {
     nav {
         position: static;
         width: 100%;
@@ -218,11 +397,23 @@ footer p {
         margin-bottom: 8px;
     }
 
+    main {
+        padding: 25px 10px;
+    }
+
     h1 {
         font-size: 1.7rem;
     }
 
-    h2 {
-        font-size: 1.3rem;
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 210px;
+    }
+
+    .faq-section {
+        margin-top: 45px;
     }
 }

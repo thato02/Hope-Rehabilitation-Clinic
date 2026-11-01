@@ -9,11 +9,11 @@ body {
     padding: 0 30px 0 250px;
     background-color: white;
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     text-align: center;
 }
 
-/* Fixed left navigation */
+
 
 nav {
     position: fixed;
@@ -28,13 +28,10 @@ nav {
     z-index: 1000;
 }
 
-/* Navigation title */
-
 .nav-title {
     margin: 5px 0 8px;
     font-size: 26px;
 }
-/* Navigation logo */
 
 .nav-logo {
     width: 155px;
@@ -44,8 +41,6 @@ nav {
     margin: 0 auto 15px;
     border-radius: 22px;
 }
-
-/* Navigation buttons */
 
 nav button {
     display: block;
@@ -58,8 +53,6 @@ nav button {
     cursor: pointer;
 }
 
-/* Navigation hover */
-
 nav button:hover {
     background-color: black;
 }
@@ -68,32 +61,39 @@ nav button:hover a {
     color: white;
 }
 
-/* Navigation links */
-
 nav a {
     color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
+
+
+main {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 30px 35px 65px;
+}
+
+
+
+
 .welcome {
     position: relative;
     width: 100%;
-    min-height: 400px;
-    overflow: hidden;
+    min-height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 85px;
 }
 
 .welcome::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-image: url("../Images/Logo2.png");
     background-size: cover;
     background-position: center;
@@ -104,102 +104,280 @@ nav a {
 .welcome-content {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.65);
-    padding: 30px;
-}
-/* Main content */
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 35px 20px 50px;
-}
-
-/* Main heading */
-
-h1 {
-    color: black;
-    font-size: 36px;
-    margin: 20px 0 25px;
-}
-
-/* IMAGE / LOGO AREA */
-
-.image-container {
-    width: 100%;
-    min-height: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 25px;
-}
-
-/* Logo */
-
-.image-container img {
-    width: 220px;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Subheading */
-
-main h2 {
-    color: black;
-    font-size: 24px;
-    margin: 15px 0;
-    font-weight: bold;
-}
-
-/* Introduction */
-
-.intro {
+    width: 75%;
     max-width: 850px;
-    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 55px;
+    border-left: 7px solid #5bb4ec;
+}
+
+.hero-label,
+.section-label {
+    color: #267da9;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.welcome h1 {
+    font-size: 44px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-button,
+.booking-button {
+    display: inline-block;
+    background-color: #5bb4ec;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-button:hover,
+.booking-button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
     font-size: 16px;
     line-height: 1.7;
 }
 
-/* Welcome section */
+
+
+
+.intro-section {
+    padding: 15px 20px 85px;
+}
+
+.intro {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 2;
+    text-align: center;
+}
+
+
+
+
+.home-services {
+    padding: 65px 35px;
+    background-color: #f5f9fb;
+    border-top: 1px solid #d5e1e7;
+    border-bottom: 1px solid #d5e1e7;
+}
+
+.home-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.home-service-card {
+    background-color: white;
+    border: 1px solid #cbd5da;
+    border-top: 5px solid #5bb4ec;
+    padding: 30px 25px;
+    text-align: left;
+    min-height: 230px;
+    transition: transform 0.3s ease;
+}
+
+.home-service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-number {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #267da9;
+    margin-bottom: 20px;
+}
+
+.home-service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.home-service-card p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
+
+.why-hrc {
+    padding: 85px 20px;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.approach-item {
+    padding: 25px 20px;
+    border-left: 4px solid #5bb4ec;
+}
+
+.approach-item h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.approach-item p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
 
 .welcome-section {
-    margin-top: 40px;
-    padding: 25px;
-    border: 2px solid black;
-    border-radius: 8px;
+    margin-top: 20px;
+    padding: 55px 30px;
     background-color: #5bb4ec;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
 
-h3 {
-    font-size: 22px;
-    margin-top: 0;
+.welcome-section h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
 }
 
-/* Booking button */
+.welcome-section > p:not(.section-label) {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
 
 .booking-button {
     background-color: white;
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 12px 25px;
     cursor: pointer;
 }
 
-.booking-button a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+
+
+@media (max-width: 900px) {
+
+    .home-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .welcome-content {
+        width: 90%;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+    }
 }
 
-.booking-button:hover {
-    background-color: black;
-}
 
-.booking-button:hover a {
-    color: white;
-}
 
-/* Footer */
+@media (max-width: 480px) {
+
+    main {
+        padding: 15px 10px 35px;
+    }
+
+    .welcome {
+        min-height: 350px;
+        margin-bottom: 50px;
+    }
+
+    .welcome-content {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .welcome h1 {
+        font-size: 29px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .intro-section {
+        padding: 10px 10px 50px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .home-services {
+        padding: 45px 15px;
+    }
+
+    .home-service-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .home-service-card {
+        min-height: auto;
+    }
+
+    .why-hrc {
+        padding: 50px 10px;
+    }
+
+    .welcome-section {
+        padding: 35px 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+}
 
 footer {
     background-color: #5bb4ec;
@@ -211,8 +389,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
-}
-footer p {
     animation: moveSideToSide 5s ease-in-out infinite;
 }
 
@@ -230,6 +406,8 @@ footer p {
     }
 }
 
+
+
 @media (max-width: 768px) {
     nav {
         width: 180px;
@@ -240,14 +418,24 @@ footer p {
         padding-right: 15px;
     }
 
-    h1 {
-        font-size: 2rem;
+    main {
+        padding: 25px 15px 45px;
     }
 
-    h2 {
-        font-size: 1.4rem;
+    .welcome {
+        min-height: 350px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    main > h2 {
+        font-size: 25px;
     }
 }
+
+
 
 @media (max-width: 480px) {
     nav {
@@ -267,11 +455,38 @@ footer p {
         margin-bottom: 8px;
     }
 
-    h1 {
-        font-size: 1.7rem;
+    main {
+        padding: 20px 10px 35px;
     }
 
-    h2 {
-        font-size: 1.3rem;
+    .welcome {
+        min-height: 280px;
+        margin-bottom: 35px;
+    }
+
+    .welcome-content {
+        padding: 25px 15px;
+        width: 92%;
+    }
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+
+    main > h2 {
+        font-size: 22px;
+    }
+
+    .intro {
+        font-size: 15px;
+        padding-bottom: 30px;
+    }
+
+    .welcome-section {
+        padding: 30px 15px;
+    }
+
+    h3 {
+        font-size: 20px;
     }
 }

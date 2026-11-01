@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRC Services</title>
     <link rel="stylesheet" href="../css/services.css">
+<meta name="description" content="Hope Rehabilitation Clinic provides counselling, rehabilitation, aftercare, and substance abuse prevention services to support individuals and families.">
+
 </head>
 
 <body>
@@ -28,6 +30,10 @@
         <button>
             <a href="contactUs.html">Contact Us</a>
         </button>
+
+        <button>
+            <a href="inquiry.html">Inquiry Form</a>
+        </button>
     </nav>
 
     <main>
@@ -39,10 +45,28 @@
             services to support individuals and families affected by substance use.
         </p>
 
+        <div class="search-container">
+    <label for="serviceSearch">Search for a service:</label>
+
+    <div class="search-box">
+        <input
+            type="search"
+            id="serviceSearch"
+            placeholder="e.g. counselling, rehabilitation...">
+
+        <button type="button" id="searchButton" aria-label="Search services">
+            🔍
+        </button>
+    </div>
+
+    <p id="searchMessage" aria-live="polite"></p>
+</div>
+
+
         <div class="service-container">
         <div class="service-card">
     <h2>Individual counselling🧍‍♀️</h2>
-        <img src="../Images/Individual.jpg">
+        <img src="../Images/Individual.jpg" alt="individual counselling">
         <p>
         One-on-one counselling sessions to help clients understand their challenges,
         develop coping skills, and work towards recovery.
@@ -51,8 +75,8 @@
         </div>
 
         <div class="service-card">
-            <h2>Family Counselling👨🏻‍👩🏼‍👧🏻‍👦🏻</h2>
-            <img src="../Images/Family.jpg">
+            <h2>Family counselling👨🏻‍👩🏼‍👧🏻‍👦🏻</h2>
+            <img src="../Images/Family.jpg" alt="family counselling">
             <p>
                 Support for families to improve communication, rebuild
                 relationships, and understand the recovery process.
@@ -63,8 +87,8 @@
 
 
         <div class="service-card">
-            <h2>Rehabilitation Program🫂</h2>
-            <img src="../Images/Rehabilitation.jpg">
+            <h2>Rehabilitation program🫂</h2>
+            <img src="../Images/Rehabilitation.jpg" alt="rehabilitation program">
             <p>
                 Structured treatment programs designed to help individuals
                 overcome substance dependence in a safe and supportive
@@ -78,7 +102,7 @@
 
         <div class="service-card">
             <h2>Aftercare Support❤️</h2>
-            <img src="../Images/Aftercare.jpg">
+            <img src="../Images/Aftercare.jpg" alt="aftercare support">
             <p>
                 Continued guidance and support after treatment to help maintain
                 long-term recovery and prevent relapse.
@@ -88,8 +112,8 @@
         </div>
 
         <div class="service-card">
-            <h2>Prevention and Awareness Programs🚭</h2>
-            <img src="../Images/Prevention.jpg">
+            <h2>Prevention and awareness programs🚭</h2>
+            <img src="../Images/Prevention.jpg" alt="prevention and awareness programs">
             <p>
                 Educational workshops and community outreach initiatives that
                 promote healthy lifestyles and raise awareness about substance
@@ -100,8 +124,8 @@
         </div>
 
         <div class="service-card">
-            <h2>Referral Services📩</h2>
-            <img src="../Images/Refferal.png">
+            <h2>Referral services📩</h2>
+            <img src="../Images/Refferal.png" alt="referral services">
             <p>
                 Referrals to healthcare providers, social services, and other
                 specialised support when additional assistance is needed.
@@ -111,10 +135,61 @@
         </div></div>
 
     </main>
+    <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            What services does HRC offer?
+        </button>
+        <div class="faq-answer" hidden>
+            <p>
+                HRC offers individual counselling, family counselling,
+                rehabilitation programs, aftercare support, prevention
+                and awareness programs, and referral services.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            How much do your services cost?
+        </button>
+        <div class="faq-answer" hidden>
+            <p>
+                Individual counselling costs R450 per session, family
+                counselling costs R600 per session, and aftercare support
+                costs R350 per session. Other program prices are listed
+                above. Referral services are free.
+            </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            How can I enquire about a service?
+        </button>
+        <div class="faq-answer" hidden>
+            <p>
+                Please visit our contact us page to find our contact
+                information and send us an enquiry.
+            </p>
+        </div>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 | Hope Rehabilitation Clinic | All Rights Reserved</p>
+        <p>Follow Hope Rehabilitation Clinic:</p>
+
+<p>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+</p>
     </footer>
 
+
+<script src="../js/services.js"></script>
 </body>
 </html>

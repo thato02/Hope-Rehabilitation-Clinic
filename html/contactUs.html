@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="contact Hope Rehabilitation Clinic, counselling appointments, rehabilitation enquiries, family support, HRC contact details">
     <title>Contact HRC</title>
     <link rel="stylesheet" href="../css/contactUs.css">
 </head>
@@ -29,6 +30,10 @@
         <button>
             <a href="contactUs.html">Contact Us</a>
         </button>
+
+        <button>
+            <a href="inquiry.html">Inquiry Form</a>
+        </button>
     </nav>
 
     <main>
@@ -43,7 +48,7 @@
                 team will get back to you.
             </p>
 
-            <form>
+            <form id="contactForm">
                 <label for="fullname">Name & surname <span class="required">*</span></label>
                 <input type="text" id="fullname" name="fullname" required><br>
 
@@ -56,14 +61,21 @@
                 <label for="reason">Reason for contact <span class="required">*</span></label>
 
                 <select id="reason" name="reason" required>
-                    <option value="">-- Select a reason --</option>
-                    <option value="general">General inquiry</option>
-                    <option value="admission">Admission information</option>
-                    <option value="fsupport">Family support session</option>
-                    <option value="partnership">Partnership</option>
+                <option value="">-- Select a reason --</option>
+                <option value="general">General enquiry</option>
+                <option value="admission">Admission information</option>
+                <option value="fsupport">Family support session</option>
+                <option value="partnership">Partnership</option>
                 </select>
 
+                <label for="message">Your message <span class="required">*</span></label>
+
+                <textarea id="message" name="message" rows="5"maxlength="500" placeholder="Please tell us how we can assist you (maximum 500 characters)."required>
+                </textarea>
+                <small id="characterCount">0/500 characters</small>
+
                 <button type="submit">Submit</button>
+            <p id="contactMessage" role="status" aria-live="polite"></p>
             </form>
         </section>
 
@@ -71,17 +83,18 @@
 
             <h2>Counselling Appointment Booking</h2>
 
-            <form>
+            <form id="bookingForm">
 
                 <label for="booking-fullname">Name &amp; surname <span class="required">*</span></label>
                 <input type="text" id="booking-fullname" name="booking-fullname" required>
 
-                <label for="phone">Contact number <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="081 234 5678"pattern="[0-9 ]+" inputmode="numeric" required>
+                <label for="booking-phone">Contact number <span class="required">*</span></label>
+                <input type="tel" id="booking-phone" name="phone"
+                placeholder="081 234 5678" pattern="[0-9 ]+" inputmode="numeric" required>
 
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-
+                <label for="booking-email">Email address <span class="required">*</span></label>
+                <input type="email" id="booking-email" name="email"
+                placeholder="example@gmail.com" required>
                 <label for="age">Age <span class="required">*</span></label><br> <input type="number" id="age" name="age" placeholder="17 or older" min="17" required>
 
                 <label for="date">Preferred date <span class="required">*</span></label>
@@ -101,13 +114,11 @@
                 </select>
 
                 <button type="submit">Submit</button>
-
+            <p id="bookingMessage" role="status" aria-live="polite"></p>
             </form>
 
         </section>
 
-
-        <!-- Contact information -->
 
         <section class="contact-section contact-information">
 
@@ -119,7 +130,7 @@
 
             <p>
             <strong>Address:</strong>
-            239 Pretorius St, Pretoria Central, Pretoria, 0126
+            239 Pretorius St, Pretoria Central, Pretoria, 0126 | Gauteng
             </p>
             <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.684509014409!2d28.185317280248423!3d-25.747944818986266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561eb88fde125%3A0xa6b2b426ca41034!2sRosebank%20College%20Pretoria%20Campus!5e0!3m2!1sen!2sza!4v1789662592510!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
@@ -148,6 +159,15 @@
             Tel: 012 223 3456 |
             Email: info@hoperehabclinic.co.za
         </p>
+        <p>Follow Hope Rehabilitation Clinic:</p>
+
+<p>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a> |
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> |
+    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+</p>
     </footer>
+
+    <script src="../js/contactUs.js"></script>
 </body>
 </html>
